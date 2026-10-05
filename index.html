@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){
+  try{document.documentElement.setAttribute('data-theme',localStorage.getItem('muzlo-theme')||'dark');}
+  catch(e){document.documentElement.setAttribute('data-theme','dark');}
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muzlo — Turn Your Ideas Into Songs</title>
+<meta name="description" content="Muzlo turns your ideas into real songs with AI. Describe a mood, pick a genre or write your own lyrics and get a complete song with vocals in seconds. Coming soon to iPhone.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Muzlo — Turn Your Ideas Into Songs">
+<meta property="og:description" content="Muzlo turns your ideas into real songs with AI. Describe a mood, pick a genre or write your own lyrics and get a complete song with vocals in seconds. Coming soon to iPhone.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://yevbas.github.io/Muzlo-Web/">
+<meta property="og:url" content="https://yevbas.github.io/Muzlo-Web/">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="topnav">
+  <div class="wrap topnav-row">
+    <a href="#home" class="brand" data-tab-link="home">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg></span>
+      <span class="brand-word">Muzlo</span>
+    </a>
+    <div class="tabbar" id="tabbar" role="tablist" aria-label="Site sections">
+      <button role="tab" aria-selected="true" data-tab="home" class="active">Home</button>
+      <button role="tab" aria-selected="false" data-tab="genres">Genres</button>
+      <button role="tab" aria-selected="false" data-tab="about">About</button>
+      <button role="tab" aria-selected="false" data-tab="support">Support</button>
+    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="nav-cta" href="#support" data-tab-link="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg><span class="long">Get in touch</span></a>
+  </div>
+</nav>
+
+<!-- ============ HOME ============ -->
+<section class="tabpanel active" id="tab-home" role="tabpanel">
+  <div class="hero">
+    <div class="hero-bloom" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">AI song generator</div>
+        <h1>Say it in words.<br>Hear it as a <span class="grad">full song</span>.</h1>
+        <p class="lead">Muzlo turns a simple idea into a complete track with vocals in seconds. Describe a mood, pick a genre or bring your own lyrics — no music skills needed.</p>
+        <div class="hero-actions">
+          <span class="btn-primary soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg>Coming soon to iPhone</span>
+          <a class="btn-ghost" data-tab-link="genres" href="#genres">Browse the genres →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>31</b><span>MUSIC GENRES</span></div>
+          <div class="stat"><b>Vocals</b><span>LYRICS INCLUDED</span></div>
+          <div class="stat"><b>iOS</b><span>BUILT FOR IPHONE</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-stage">
+          <div class="phone-shell"><img src="assets/screenshots/song-rock.jpg" alt="Muzlo playing a rock song called Side by Side" /></div>
+          <div class="float-chip chip-a"><img src="assets/genres/rock.jpg" alt="">Rock</div>
+          <div class="float-chip chip-b"><img src="assets/genres/synthwave.jpg" alt="">Synthwave</div>
+          <div class="float-chip chip-c"><img src="assets/genres/lofi.jpg" alt="">Lo-fi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="showcase">
+    <div class="wrap">
+      <div class="showcase-head">
+        <div class="section-head" style="margin-bottom:0">
+          <div class="eyebrow">App preview</div>
+          <h2>See Muzlo in action.</h2>
+          <p>Real screens, straight from the app.</p>
+        </div>
+        <div class="showcase-nav">
+          <button type="button" id="showcasePrev" aria-label="Scroll previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" id="showcaseNext" aria-label="Scroll next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-track" id="showcaseTrack">
+        <div class="preview-card">
+          <div class="preview-screen"><img src="assets/screenshots/home.jpg" alt="Muzlo Audio Room showing saved songs and the supported genres grid" loading="lazy" /></div>
+          <span class="preview-tag">Audio Room</span>
+          <p class="preview-caption">Every song you make, saved in one place</p>
+        </div>
+        <div class="preview-card">
+          <div class="preview-screen"><img src="assets/screenshots/compose.jpg" alt="Muzlo New song screen with prompt box and genre carousel" loading="lazy" /></div>
+          <span class="preview-tag">New song</span>
+          <p class="preview-caption">Describe it, pick a genre, generate</p>
+        </div>
+        <div class="preview-card">
+          <div class="preview-screen"><img src="assets/screenshots/song-folk.jpg" alt="Muzlo song player for a folk track with artwork and lyrics" loading="lazy" /></div>
+          <span class="preview-tag">Player</span>
+          <p class="preview-caption">Folk, with campfire artwork to match</p>
+        </div>
+        <div class="preview-card">
+          <div class="preview-screen"><img src="assets/screenshots/song-rock.jpg" alt="Muzlo song player for a rock track with artwork and lyrics" loading="lazy" /></div>
+          <span class="preview-tag">Lyrics</span>
+          <p class="preview-caption">Full lyrics, 15-second skips, one-tap share</p>
+        </div>
+    </div>
+    <div class="showcase-dots" id="showcaseDots"></div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Why Muzlo</div>
+        <h2>Music for every moment, without the studio.</h2>
+        <p>A gift, a video soundtrack or just for fun — Muzlo makes creating music effortless.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-icon fi-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><rect x="4" y="15" width="16" height="6" rx="2"/></svg></div><h3>Prompt to song</h3><p>Describe a mood, a moment or a memory. Muzlo turns it into a complete track with vocals.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h14"/></svg></div><h3>Your own lyrics</h3><p>Write the words yourself or let the AI write them — every song keeps its lyrics on screen.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3>31 genres</h3><p>From lo-fi and synthwave to gospel and K-pop, each with its own hand-made artwork.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></div><h3>Share it</h3><p>Save songs to your Audio Room, replay them anytime and send them to friends in a tap.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Three steps from idea to song.</h2>
+      </div>
+      <div class="stage-row">
+        <div class="stage"><span class="stage-num">1</span><h3>Describe it</h3><p>Type a few words about the mood or story, or paste your own lyrics. Stuck? The built-in prompt guide has ideas.</p></div>
+        <div class="stage"><span class="stage-num">2</span><h3>Pick a genre</h3><p>Swipe through the genre carousel, choose instrumental or vocals, and set a custom length if you like.</p></div>
+        <div class="stage"><span class="stage-num">3</span><h3>Generate &amp; share</h3><p>Muzlo composes your song, adds title, artwork and lyrics, and saves it to your Audio Room to play or share.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Genres</div>
+        <h2>Whatever the sound, there's a genre for it.</h2>
+      </div>
+      <div class="genre-mosaic">
+        <img src="assets/genres/pop.jpg" alt="Pop genre artwork" loading="lazy">
+        <img src="assets/genres/alternative.jpg" alt="Alternative genre artwork" loading="lazy">
+        <img src="assets/genres/rock.jpg" alt="Rock genre artwork" loading="lazy">
+        <img src="assets/genres/hiphop.jpg" alt="Hip-hop genre artwork" loading="lazy">
+        <img src="assets/genres/trap.jpg" alt="Trap genre artwork" loading="lazy">
+        <img src="assets/genres/rnb.jpg" alt="R&amp;B genre artwork" loading="lazy">
+        <img src="assets/genres/soulfunk.jpg" alt="Soul / Funk genre artwork" loading="lazy">
+        <img src="assets/genres/electronic.jpg" alt="Electronic genre artwork" loading="lazy">
+        <img src="assets/genres/dance.jpg" alt="Dance / EDM genre artwork" loading="lazy">
+        <img src="assets/genres/house.jpg" alt="House genre artwork" loading="lazy">
+        <img src="assets/genres/techno.jpg" alt="Techno genre artwork" loading="lazy">
+        <img src="assets/genres/drumandbass.jpg" alt="Drum and bass genre artwork" loading="lazy">
+        <img src="assets/genres/synthwave.jpg" alt="Synthwave genre artwork" loading="lazy">
+        <img src="assets/genres/disco.jpg" alt="Disco genre artwork" loading="lazy">
+        <img src="assets/genres/lofi.jpg" alt="Lo-fi genre artwork" loading="lazy">
+        <img src="assets/genres/jazz.jpg" alt="Jazz genre artwork" loading="lazy">
+      </div>
+      <a class="more-link" data-tab-link="genres" href="#genres">See all 31 genres →</a>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <div><h2>Your next favourite song starts with an idea.</h2><p>Muzlo is coming soon to the App Store.</p></div>
+      <div class="store-badges"><span class="store-badge" aria-disabled="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="lines"><small>Coming soon to the</small><span>App Store</span></span>
+        </span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GENRES ============ -->
+<section class="tabpanel" id="tab-genres" role="tabpanel">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Supported music genres</div>
+        <h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.015em;">Create songs in any genre possible.</h1>
+        <p>31 genres, each with its own artwork — and every song you generate gets cover art that matches.</p>
+      </div>
+      <div class="genre-grid">
+        <div class="genre-tile"><img src="assets/genres/pop.jpg" alt="Pop genre artwork" loading="lazy"><span>Pop</span></div>
+        <div class="genre-tile"><img src="assets/genres/alternative.jpg" alt="Alternative genre artwork" loading="lazy"><span>Alternative</span></div>
+        <div class="genre-tile"><img src="assets/genres/rock.jpg" alt="Rock genre artwork" loading="lazy"><span>Rock</span></div>
+        <div class="genre-tile"><img src="assets/genres/hiphop.jpg" alt="Hip-hop genre artwork" loading="lazy"><span>Hip-hop</span></div>
+        <div class="genre-tile"><img src="assets/genres/trap.jpg" alt="Trap genre artwork" loading="lazy"><span>Trap</span></div>
+        <div class="genre-tile"><img src="assets/genres/rnb.jpg" alt="R&amp;B genre artwork" loading="lazy"><span>R&amp;B</span></div>
+        <div class="genre-tile"><img src="assets/genres/soulfunk.jpg" alt="Soul / Funk genre artwork" loading="lazy"><span>Soul / Funk</span></div>
+        <div class="genre-tile"><img src="assets/genres/electronic.jpg" alt="Electronic genre artwork" loading="lazy"><span>Electronic</span></div>
+        <div class="genre-tile"><img src="assets/genres/dance.jpg" alt="Dance / EDM genre artwork" loading="lazy"><span>Dance / EDM</span></div>
+        <div class="genre-tile"><img src="assets/genres/house.jpg" alt="House genre artwork" loading="lazy"><span>House</span></div>
+        <div class="genre-tile"><img src="assets/genres/techno.jpg" alt="Techno genre artwork" loading="lazy"><span>Techno</span></div>
+        <div class="genre-tile"><img src="assets/genres/drumandbass.jpg" alt="Drum and bass genre artwork" loading="lazy"><span>Drum and bass</span></div>
+        <div class="genre-tile"><img src="assets/genres/synthwave.jpg" alt="Synthwave genre artwork" loading="lazy"><span>Synthwave</span></div>
+        <div class="genre-tile"><img src="assets/genres/disco.jpg" alt="Disco genre artwork" loading="lazy"><span>Disco</span></div>
+        <div class="genre-tile"><img src="assets/genres/lofi.jpg" alt="Lo-fi genre artwork" loading="lazy"><span>Lo-fi</span></div>
+        <div class="genre-tile"><img src="assets/genres/jazz.jpg" alt="Jazz genre artwork" loading="lazy"><span>Jazz</span></div>
+        <div class="genre-tile"><img src="assets/genres/blues.jpg" alt="Blues genre artwork" loading="lazy"><span>Blues</span></div>
+        <div class="genre-tile"><img src="assets/genres/gospel.jpg" alt="Gospel genre artwork" loading="lazy"><span>Gospel</span></div>
+        <div class="genre-tile"><img src="assets/genres/classical.jpg" alt="Classical genre artwork" loading="lazy"><span>Classical</span></div>
+        <div class="genre-tile"><img src="assets/genres/cinematic.jpg" alt="Cinematic genre artwork" loading="lazy"><span>Cinematic</span></div>
+        <div class="genre-tile"><img src="assets/genres/ambient.jpg" alt="Ambient genre artwork" loading="lazy"><span>Ambient</span></div>
+        <div class="genre-tile"><img src="assets/genres/folk.jpg" alt="Folk genre artwork" loading="lazy"><span>Folk</span></div>
+        <div class="genre-tile"><img src="assets/genres/country.jpg" alt="Country genre artwork" loading="lazy"><span>Country</span></div>
+        <div class="genre-tile"><img src="assets/genres/reggae.jpg" alt="Reggae genre artwork" loading="lazy"><span>Reggae</span></div>
+        <div class="genre-tile"><img src="assets/genres/reggaeton.jpg" alt="Reggaeton genre artwork" loading="lazy"><span>Reggaeton</span></div>
+        <div class="genre-tile"><img src="assets/genres/latin.jpg" alt="Latin genre artwork" loading="lazy"><span>Latin</span></div>
+        <div class="genre-tile"><img src="assets/genres/metal.jpg" alt="Metal genre artwork" loading="lazy"><span>Metal</span></div>
+        <div class="genre-tile"><img src="assets/genres/punk.jpg" alt="Punk genre artwork" loading="lazy"><span>Punk</span></div>
+        <div class="genre-tile"><img src="assets/genres/indie.jpg" alt="Indie genre artwork" loading="lazy"><span>Indie</span></div>
+        <div class="genre-tile"><img src="assets/genres/kpop.jpg" alt="K-pop genre artwork" loading="lazy"><span>K-pop</span></div>
+        <div class="genre-tile"><img src="assets/genres/afrobeats.jpg" alt="Afrobeats genre artwork" loading="lazy"><span>Afrobeats</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <div><h2>Pick a genre. Make it yours.</h2><p>Muzlo is coming soon to the App Store.</p></div>
+      <div class="store-badges"><span class="store-badge" aria-disabled="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="lines"><small>Coming soon to the</small><span>App Store</span></span>
+        </span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="tabpanel" id="tab-about" role="tabpanel">
+  <section>
+    <div class="wrap about-hero">
+      <div>
+        <div class="eyebrow">About Muzlo</div>
+        <h1>Everyone has a song in them. Muzlo helps it out.</h1>
+        <p class="lead">Muzlo exists to close the gap between having a musical idea and hearing it — without instruments, software or years of practice.</p>
+      </div>
+      <div class="mark-card">
+        <img src="assets/genres/synthwave.jpg" alt="Synthwave artwork"><img src="assets/genres/folk.jpg" alt="Folk artwork"><img src="assets/genres/jazz.jpg" alt="Jazz artwork"><img src="assets/genres/pop.jpg" alt="Pop artwork">
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="story-block"><div class="label">The problem</div><div class="body"><h3>Making music has always had a steep entry fee</h3><p>Writing, arranging, recording and singing a song takes tools, training and time. Most people who want a birthday song, a video soundtrack or a tribute to someone they love never get to hear it.</p></div></div>
+      <div class="story-block"><div class="label">The approach</div><div class="body"><h3>Let words become music</h3><p>You describe the song; Muzlo does the rest. Song generation is powered by the <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a> API, which turns your prompt and lyrics into a finished track with vocals, while Muzlo handles the genres, artwork, library and player around it.</p></div></div>
+      <div class="story-block"><div class="label">The team</div><div class="body"><h3>Small, independent, and still shipping</h3><p>Muzlo is built by a small independent team who make songs with it every day — every genre, screen and setting exists because someone on the team wanted it.</p></div></div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we optimize for</div><h2>Four things we won't compromise on.</h2></div>
+      <div class="values-grid">
+        <div class="value-card"><span class="n">Speed</span><h3>Seconds, not sessions</h3><p>From idea to playable song fast enough to still be excited about it.</p></div>
+        <div class="value-card"><span class="n">Variety</span><h3>Every sound covered</h3><p>31 genres, from lo-fi to metal, so the song fits the moment.</p></div>
+        <div class="value-card"><span class="n">Privacy</span><h3>Your ideas are yours</h3><p>No account details, no selling your prompts. Your library stays yours.</p></div>
+        <div class="value-card"><span class="n">Simplicity</span><h3>One clear flow</h3><p>Describe, pick, generate. No timelines, no mixers, no manual.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <div><h2>Hear what your idea sounds like.</h2><p>Muzlo is coming soon to the App Store.</p></div>
+      <div class="store-badges"><span class="store-badge" aria-disabled="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="lines"><small>Coming soon to the</small><span>App Store</span></span>
+        </span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUPPORT ============ -->
+<section class="tabpanel" id="tab-support" role="tabpanel">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Support</div>
+        <h1 style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.015em;">How can we help?</h1>
+        <p class="lead" style="margin-top:12px;">Answers to what we hear most. Can't find it here — email us directly.</p>
+      </div>
+      <div class="support-grid">
+        <div class="faq-list">
+          <details class="faq-item" open><summary class="faq-q">How does Muzlo make songs?<span class="plus"></span></summary><div class="faq-a">You describe the song and choose a genre. Muzlo sends your prompt to the <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a> API, which generates the music and vocals. Muzlo then adds a title, artwork and lyrics and saves the result to your Audio Room.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I write my own lyrics?<span class="plus"></span></summary><div class="faq-a">Yes. Write your own lyrics in the prompt, or describe a theme and let the AI write them. You can also switch on Instrumental to get a track with no vocals.</div></details>
+          <details class="faq-item"><summary class="faq-q">Which genres are supported?<span class="plus"></span></summary><div class="faq-a">31, including pop, hip-hop, rock, lo-fi, electronic, jazz, classical, country, K-pop and Afrobeats. See the Genres tab for the full list.</div></details>
+          <details class="faq-item"><summary class="faq-q">Can I choose how long a song is?<span class="plus"></span></summary><div class="faq-a">Yes — turn on Custom length on the New song screen to set the duration yourself.</div></details>
+          <details class="faq-item"><summary class="faq-q">Where do my songs go?<span class="plus"></span></summary><div class="faq-a">Every song is saved to your Audio Room, where you can replay it, read the lyrics, share it or delete it.</div></details>
+          <details class="faq-item"><summary class="faq-q">Is Muzlo free?<span class="plus"></span></summary><div class="faq-a">Pricing will be shown inside the app before you're asked to pay for anything. Subscriptions are handled through the App Store.</div></details>
+          <details class="faq-item"><summary class="faq-q">I have a feature request — where does it go?<span class="plus"></span></summary><div class="faq-a">Straight to the team's inbox. We read every request.</div></details>
+        </div>
+        <div class="support-side">
+          <div class="contact-card"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div><h3>Email support</h3><p>For bugs, billing, or anything account-related. We reply within one business day.</p><a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a></div>
+          <div class="contact-card"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Feature requests</h3><p>Tell us which genre or feature is missing.</p><a class="link" href="mailto:plateaibusiness0@gmail.com">plateaibusiness0@gmail.com</a></div>
+          <div class="contact-card"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Status &amp; known issues</h3><p>Nothing broken right now. If something feels off, email support first.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner">
+      <div><h2>Ready when you are.</h2><p>Muzlo is coming soon to the App Store.</p></div>
+      <div class="store-badges"><span class="store-badge" aria-disabled="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.55C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.5 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.82zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="lines"><small>Coming soon to the</small><span>App Store</span></span>
+        </span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span class="brand">Muzlo</span>
+    <nav class="foot-legal">
+      <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a>
+      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    </nav>
+    <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var buttons=Array.prototype.slice.call(document.querySelectorAll('.tabbar button'));
+  var panels={home:document.getElementById('tab-home'),genres:document.getElementById('tab-genres'),about:document.getElementById('tab-about'),support:document.getElementById('tab-support')};
+  function activate(name,push){
+    buttons.forEach(function(b){var on=b.dataset.tab===name;b.classList.toggle('active',on);b.setAttribute('aria-selected',on?'true':'false');});
+    Object.keys(panels).forEach(function(k){panels[k].classList.toggle('active',k===name);});
+    if(push!==false)history.replaceState(null,'','#'+name);
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  buttons.forEach(function(b){b.addEventListener('click',function(){activate(b.dataset.tab);});});
+  document.querySelectorAll('[data-tab-link]').forEach(function(el){
+    el.addEventListener('click',function(e){
+      if(el.getAttribute('href')==='#how-it-works')return;
+      e.preventDefault();activate(el.dataset.tabLink);
+    });
+  });
+  var initial=(location.hash||'#home').replace('#','');
+  if(!panels[initial])initial='home';
+  requestAnimationFrame(function(){activate(initial,false);});
+
+  var track=document.getElementById('showcaseTrack'),prevBtn=document.getElementById('showcasePrev'),nextBtn=document.getElementById('showcaseNext'),dotsWrap=document.getElementById('showcaseDots');
+  if(track){
+    var cards=Array.prototype.slice.call(track.querySelectorAll('.preview-card')),dots=[],activeIndex=-1;
+    cards.forEach(function(_,i){
+      var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Go to preview '+(i+1));
+      d.addEventListener('click',function(){cards[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});});
+      dotsWrap.appendChild(d);dots.push(d);
+    });
+    function setActive(idx){if(idx===activeIndex)return;activeIndex=idx;cards.forEach(function(c,i){c.classList.toggle('is-active',i===idx);});dots.forEach(function(d,i){d.classList.toggle('is-active',i===idx);});}
+    var ticking=false;
+    function update(){
+      ticking=false;var r=track.getBoundingClientRect(),c=r.left+r.width/2,best=0,bd=Infinity;
+      cards.forEach(function(el,i){var b=el.getBoundingClientRect(),d=Math.abs(b.left+b.width/2-c);if(d<bd){bd=d;best=i;}});
+      setActive(best);
+    }
+    track.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+    window.addEventListener('resize',update);requestAnimationFrame(update);
+    function go(i){i=Math.max(0,Math.min(cards.length-1,i));cards[i].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});}
+    prevBtn.addEventListener('click',function(){go(activeIndex-1);});
+    nextBtn.addEventListener('click',function(){go(activeIndex+1);});
+    var down=false,sx,sl;
+    track.addEventListener('mousedown',function(e){down=true;sx=e.pageX;sl=track.scrollLeft;track.style.scrollSnapType='none';});
+    window.addEventListener('mouseup',function(){if(down){down=false;track.style.scrollSnapType='';}});
+    track.addEventListener('mousemove',function(e){if(!down)return;e.preventDefault();track.scrollLeft=sl-(e.pageX-sx)*1.2;});
+  }
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('themeToggle');if(!btn)return;
+  btn.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
+    var next=cur==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    try{localStorage.setItem('muzlo-theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
