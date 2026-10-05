@@ -108,9 +108,9 @@ section.tight{padding:64px 0}
 .showcase-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);background:var(--paper);display:grid;place-items:center;transition:border-color .25s,color .25s}
 .showcase-nav button:hover{border-color:var(--magenta);color:var(--magenta)}
 .showcase-nav svg{width:20px;height:20px}
-.showcase-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px max(28px,calc((100vw - 1120px)/2 + 28px)) 30px;scrollbar-width:none;cursor:grab}
+.showcase-track{--cw:min(280px,70vw);display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px calc(50% - var(--cw)/2) 30px;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch}
 .showcase-track::-webkit-scrollbar{display:none}
-.preview-card{flex:0 0 min(260px,66vw);scroll-snap-align:center;text-align:center;opacity:.55;transform:scale(.95);transition:opacity .3s,transform .3s}
+.preview-card{flex:0 0 var(--cw);scroll-snap-align:center;text-align:center;opacity:.6;transform:scale(.94);transition:opacity .3s,transform .3s}
 .preview-card.is-active{opacity:1;transform:none}
 .preview-screen{border-radius:34px;border:6px solid #0a0412;overflow:hidden;box-shadow:0 24px 50px -20px rgba(90,20,140,.5)}
 .preview-screen img{width:100%;-webkit-user-drag:none;user-select:none}
