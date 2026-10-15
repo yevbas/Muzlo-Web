@@ -31,72 +31,114 @@
 </nav>
 <header class="legal-hero">
   <div class="wrap">
-    <div class="eyebrow">Legal</div>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated October 5, 2026 · Applies to the Muzlo iOS app</p>
-    <p class="lead">Yevhen Basistyi ("we," "our," or "us") respects your privacy and is committed to protecting it. This Privacy Policy explains how Muzlo (the "App") handles information. By using the App, you agree to the practices described here.</p>
-  </div>
-</header>
-<article>
-  <div class="wrap">
     <div class="clause">
       <div class="clause-num">01</div>
-      <h2>Information we collect</h2>
-      <p>Muzlo does not collect or store personal or sensitive data on our own servers. The App does, however, integrate with a small set of third-party services to provide song generation, crash reporting, advertising, and subscription management:</p>
-      <div class="partner-grid">
-        <div class="partner-card"><b>ElevenLabs</b><span>Generates songs, vocals and lyrics from the prompts you submit (<a href="https://elevenlabs.io" target="_blank" rel="noopener">elevenlabs.io</a>).</span></div>
-        <div class="partner-card"><b>Google AdMob</b><span>Serves in-app advertising.</span></div>
-        <div class="partner-card"><b>Firebase Crashlytics</b><span>Identifies and helps us fix app crashes.</span></div>
-        <div class="partner-card"><b>RevenueCat</b><span>Manages in-app subscriptions and purchases.</span></div>
-      </div>
+      <h2>Who we are and scope</h2>
+      <p>Muzlo (the "App") is an iOS app that turns text prompts and lyrics into AI-generated songs. It is operated by Yevhen Basistyi ("we," "our," or "us"), who is the data controller for the personal information described in this policy.</p>
+      <p>This policy explains what information the App collects, how it is used, who it is shared with, how long it is kept, and the choices and rights you have. By using the App you acknowledge the practices described here. If you do not agree, please do not use the App.</p>
     </div>
     <div class="clause">
       <div class="clause-num">02</div>
-      <h2>Device permissions</h2>
-      <p>Muzlo does not require access to your camera, microphone, contacts or location. Text prompts and lyrics you type are sent to <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a> to generate your song; Muzlo itself does not retain a copy after that request completes.</p>
+      <h2>Information we collect</h2>
+      <p>We collect only what the App needs to authenticate you, generate songs, manage credits and subscriptions, and keep the service secure.</p>
+      <h3>Information you provide</h3>
+      <ul>
+        <li><b>Name and email (optional).</b> You may add a name and an email address in your profile or during onboarding. Both are optional, and you can remove them at any time by clearing the fields and saving.</li>
+        <li><b>Prompts and lyrics.</b> The text you type to describe or write a song, and the settings you choose (such as genre, style, length, and which parts of a song to keep or regenerate in Re-Compose).</li>
+        <li><b>Photos you choose (optional).</b> If you pick a cover image for a song from your photo library, it is used and stored on your device only. It is not uploaded to our servers.</li>
+      </ul>
+      <h3>Information created automatically</h3>
+      <ul>
+        <li><b>Anonymous account identifier.</b> The App signs you in with Firebase Anonymous Authentication, which creates a random user ID (UID). There is no password and no sign-in with a social account. The UID links your credits, subscription state, profile and songs together.</li>
+        <li><b>Credit and usage records.</b> Our backend records your credit usage for the current period, your purchased credit balance, the identifiers of credit packs you bought, whether your one-time onboarding song has been used, and a record of which generated songs belong to your account (song ID and creation time).</li>
+        <li><b>Subscription and purchase information.</b> Through RevenueCat we receive your subscription product, status, period type (for example free trial or normal), purchase and expiry dates, store, and environment, as well as consumable credit pack purchases. We never receive your payment card or Apple ID credentials.</li>
+        <li><b>Device and attribution identifiers.</b> RevenueCat assigns an app user ID and may process a device identifier. If you came from an Apple Search Ads campaign, the App collects Apple's AdServices attribution token so that RevenueCat can resolve which campaign, ad group or keyword led to the install and purchase. This does not use the advertising identifier (IDFA) and does not require the App Tracking Transparency prompt.</li>
+        <li><b>Security and technical data.</b> Firebase App Check verifies that requests come from a genuine copy of the App, and Firebase and Google Cloud generate standard operational logs (such as IP address, timestamps and error details) when your device calls our backend.</li>
+      </ul>
+      <h3>Information we do not collect</h3>
+      <p>The App does not request access to your location, contacts, microphone, camera, health data, or browsing history, and it does not use advertising SDKs or third-party analytics SDKs. The songs you create are not published or shared with other users.</p>
     </div>
     <div class="clause">
       <div class="clause-num">03</div>
-      <h2>How data is used</h2>
-      <p>While Muzlo does not maintain its own user database, the third-party services above process data on our behalf:</p>
+      <h2>How we use information</h2>
       <ul>
-        <li><b>ElevenLabs</b> processes submitted prompts and lyrics to compose the song and return the audio and lyrics.</li>
-        <li><b>AdMob</b> uses device and usage signals to serve personalized or generic ads.</li>
-        <li><b>Firebase Crashlytics</b> collects crash and diagnostic data to improve app stability.</li>
-        <li><b>RevenueCat</b> manages subscription state and purchase history tied to your App Store account.</li>
+        <li><b>Provide the service:</b> authenticate your anonymous account, generate and re-compose songs, return the audio and lyrics to your device, and keep your library on your device.</li>
+        <li><b>Operate credits and subscriptions:</b> reserve and settle credits for each generation, apply your plan's periodic allowance, add purchased credit packs, refund credits after failed generations, and unlock features when your subscription is active.</li>
+        <li><b>Process purchases:</b> confirm purchases and renewals, restore access, and prevent duplicate crediting (each purchase event is applied once).</li>
+        <li><b>Personalize the experience:</b> show your name if you provided one.</li>
+        <li><b>Prevent abuse and fraud:</b> enforce usage limits, the one-time onboarding song, and App Check verification.</li>
+        <li><b>Measure ad campaigns:</b> attribute installs and purchases to our own Apple Search Ads campaigns, in aggregate, to evaluate their effectiveness.</li>
+        <li><b>Support and legal:</b> respond to your requests, troubleshoot problems, and comply with legal obligations.</li>
       </ul>
-      <p>No personal information is stored by Muzlo beyond what's required for these integrations to function, and nothing is shared without anonymization where technically possible.</p>
+      <p><b>Legal bases (EEA, UK).</b> Where GDPR applies, we rely on performance of a contract (providing the App you requested), our legitimate interests (security, fraud prevention, measuring our own ad campaigns), consent (the optional profile fields), and legal obligation, as applicable.</p>
+      <p>We do not use your prompts, lyrics or songs to train our own models, we do not sell personal information, and we do not use your data for third-party advertising or cross-app tracking.</p>
     </div>
     <div class="clause">
       <div class="clause-num">04</div>
-      <h2>Data sharing</h2>
-      <p>We may share limited, anonymized data with:</p>
-      <ul>
-        <li><b>ElevenLabs</b> — to process song generation requests. No user-identifiable data is included in these requests.</li>
-        <li><b>Google AdMob</b> — to display in-app advertisements.</li>
-        <li><b>Firebase Crashlytics</b> — to diagnose and resolve crashes.</li>
-        <li><b>RevenueCat</b> — to process and manage subscriptions.</li>
-      </ul>
-      <p>We do not sell your data, and we do not share it with any party outside of the integrations listed in this policy.</p>
+      <h2>Service providers and who receives data</h2>
+      <p>We share information only with service providers that process it on our behalf to run the App:</p>
+      <div class="partner-grid">
+        <div class="partner-card"><b>ElevenLabs</b><span>Receives your prompt or composition plan (and, for Re-Compose, the audio and plan for the song being edited) to generate music, vocals and lyrics. Requests are sent by our backend and do not include your name, email or account ID. See <a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener">elevenlabs.io/privacy</a>.</span></div>
+        <div class="partner-card"><b>Google Firebase / Google Cloud</b><span>Hosts our backend (Cloud Functions and Realtime Database), anonymous authentication and App Check. Stores your account record described in section 2. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</span></div>
+        <div class="partner-card"><b>RevenueCat</b><span>Manages subscriptions, credit pack purchases and Apple Search Ads attribution, and notifies our backend of purchase events. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</span></div>
+        <div class="partner-card"><b>Apple</b><span>Processes payments, subscriptions and refunds through the App Store, and provides Apple Search Ads attribution. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</span></div>
+      </div>
+      <p>We may also disclose information if required by law, to protect our rights, users or the public, or in connection with a merger, acquisition or sale of the App, in which case this policy would continue to apply to your information unless you are notified of a change.</p>
+      <p>We do not sell or "share" personal information as those terms are defined in the California Consumer Privacy Act, and we do not track you across other companies' apps or websites.</p>
     </div>
     <div class="clause">
       <div class="clause-num">05</div>
-      <h2>Data storage and security</h2>
-      <p>Data generated by your use of the App remains on your device, with the exception of the prompts and lyrics sent to <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a> for song generation at the moment you request it. Transmissions to our third-party partners are encrypted in transit.</p>
+      <h2>Where your data is stored and how long we keep it</h2>
+      <ul>
+        <li><b>On your device:</b> your song library, generated audio, lyrics, cover images and settings are stored locally. Deleting the App removes this data. Songs are not backed up to our servers.</li>
+        <li><b>Prompts and lyrics:</b> our backend forwards them to ElevenLabs to complete the request and does not store them in our database. Ephemeral technical logs may record errors but are not used to build a profile of you. ElevenLabs handles the data under its own terms and retention practices.</li>
+        <li><b>Account records</b> (profile, credits, usage, subscription state, onboarding flag, song ownership): kept while your account is active and deleted when you ask us to delete it (see section 8), except where we must retain records for legal, tax or fraud-prevention purposes.</li>
+        <li><b>Purchase records:</b> retained by Apple and RevenueCat according to their own policies and legal requirements.</li>
+        <li><b>Logs:</b> operational logs are kept by Google Cloud for a limited period according to its default retention settings.</li>
+      </ul>
+      <p>Our service providers may process data in the United States and other countries outside your own. Where required, we rely on appropriate safeguards such as Standard Contractual Clauses or the provider's participation in recognized data-transfer frameworks.</p>
     </div>
     <div class="clause">
       <div class="clause-num">06</div>
-      <h2>Regional compliance</h2>
-      <p>We aim to comply with applicable data protection regulations, including:</p>
-      <div class="region-row">
-        <div class="region-card"><b>GDPR — European Union</b><p>Users in the EU may request access to, correction of, or deletion of data processed through our third-party services by contacting us below.</p></div>
-        <div class="region-card"><b>CCPA — California</b><p>California residents may opt out of third-party data processing by contacting us or adjusting the relevant settings within those third-party services.</p></div>
-      </div>
+      <h2>Security</h2>
+      <p>Data sent between the App and our backend, and between our backend and providers, is encrypted in transit. Access to our database is restricted by security rules so that users can read only their own records, and requests are verified with Firebase Authentication and App Check. Purchase webhooks are authenticated with a secret. No method of transmission or storage is completely secure, so we cannot guarantee absolute security. If you believe your account has been compromised, please contact us.</p>
     </div>
     <div class="clause">
       <div class="clause-num">07</div>
+      <h2>Children's privacy</h2>
+      <p>The App is not directed to children under 13 (or under 16 where local law sets a higher age for digital consent), and we do not knowingly collect personal information from them. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+    </div>
+    <div class="clause">
+      <div class="clause-num">08</div>
+      <h2>Your choices and rights</h2>
+      <p>You can:</p>
+      <ul>
+        <li><b>Edit or remove your name and email</b> at any time in Settings → Profile.</li>
+        <li><b>Delete local data</b> by deleting songs in the App or deleting the App.</li>
+        <li><b>Manage or cancel your subscription</b> in your Apple ID settings.</li>
+        <li><b>Limit ad attribution:</b> on iOS you can turn off Apple Search Ads personalization in Settings → Privacy &amp; Security → Apple Advertising.</li>
+        <li><b>Contact us</b> to request access to, correction of, a portable copy of, or deletion of the data we hold about you, or to object to or restrict certain processing. Include the email you saved in your profile, if any, so we can locate your record. We may need to verify your request, and we will respond within the time required by applicable law (generally within 30 days).</li>
+      </ul>
+      <p>Deleting your account data removes your profile, credit balance, usage records and song ownership records. Remaining credits and any active subscription benefits cannot be recovered after deletion. Subscriptions must be cancelled separately through Apple.</p>
+      <div class="region-row">
+        <div class="region-card"><b>GDPR — EEA &amp; UK</b><p>You have the rights of access, rectification, erasure, restriction, portability and objection, and the right to withdraw consent at any time. You may lodge a complaint with your local data protection authority.</p></div>
+        <div class="region-card"><b>CCPA — California</b><p>You may request to know, delete or correct personal information we hold, and we will not discriminate against you for exercising these rights. We do not sell or share personal information for cross-context behavioral advertising.</p></div>
+      </div>
+    </div>
+    <div class="clause">
+      <div class="clause-num">09</div>
+      <h2>Apple privacy labels</h2>
+      <p>For transparency, the data we declare in our App Store privacy details is: name, email address, user ID, device ID, purchase history and other user content (your prompts and generated songs). All are linked to your account, are used for app functionality (device ID is also used for advertising attribution and analytics of our own campaigns), and none are used to track you.</p>
+    </div>
+    <div class="clause">
+      <div class="clause-num">10</div>
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time, for example when we add features or providers. The "Last updated" date at the top shows the latest revision. For material changes we will notify you in the App or by other appropriate means. Continued use of the App after an update means you accept the revised policy.</p>
+    </div>
+    <div class="clause">
+      <div class="clause-num">11</div>
       <h2>Contact</h2>
-      <p>For privacy-related questions or requests, or for general app support:</p>
+      <p>For privacy questions, data requests, or general support:</p>
       <div class="contact-box">
         <div class="row"><b>Privacy inquiries</b><a href="mailto:yevhen.basistyi@gmail.com">yevhen.basistyi@gmail.com</a></div>
         <div class="row"><b>App support</b><a href="mailto:yevhen.basistyi@gmail.com">yevhen.basistyi@gmail.com</a></div>
