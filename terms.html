@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-(function(){
-  try{document.documentElement.setAttribute('data-theme',localStorage.getItem('muzlo-theme')||'dark');}
-  catch(e){document.documentElement.setAttribute('data-theme','dark');}
-})();
-</script>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#140D4D">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Use — Muzlo</title>
 <meta name="description" content="Terms of Use for the Muzlo iOS app.">
@@ -23,14 +18,18 @@
 <nav class="topnav">
   <div class="topnav-row">
     <a class="brand" href="index.html"><span class="mark"><img src="assets/app-icon.png" alt="" width="30" height="30"></span><span class="brand-word">Muzlo</span></a>
-    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
     <a class="back" href="index.html">← Back to Muzlo</a>
   </div>
 </nav>
 <header class="legal-hero">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Use</h1>
+    <p class="updated">Last updated October 15, 2026 · Applies to the Muzlo iOS app</p>
+    <p class="lead">Please read these Terms carefully. They explain how Muzlo works, including subscriptions, music credits and AI-generated content, and your rights and responsibilities when using the App.</p>
+  </div>
+</header>
+<article>
   <div class="wrap">
     <div class="clause">
       <div class="clause-num">01</div>
@@ -169,16 +168,5 @@
     <span>&copy; 2026 Yevhen Basistyi. All rights reserved.</span>
   </div>
 </footer>
-<script>
-(function(){
-  var btn=document.getElementById('themeToggle');if(!btn)return;
-  btn.addEventListener('click',function(){
-    var cur=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
-    var next=cur==='dark'?'light':'dark';
-    document.documentElement.setAttribute('data-theme',next);
-    try{localStorage.setItem('muzlo-theme',next);}catch(e){}
-  });
-})();
-</script>
 </body>
 </html>
